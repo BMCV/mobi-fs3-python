@@ -1,5 +1,8 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "extensions": [
+    "ms-python.python"
+  ],
   "hostRequirements": {
     "cpus": 4
   },
@@ -12,9 +15,11 @@
     },
     "vscode": {
       "extensions": [
-        "ms-python.python",
         "ms-toolsai.jupyter"
-      ]
+      ],
+      "settings": {
+        "python.linting.pylintEnabled": null
+      }
     }
   }
 }
