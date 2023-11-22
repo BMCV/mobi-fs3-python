@@ -1,25 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "image": "docker.io/kostrykin/mobi-devcontainer-python:2023.1",,
   "hostRequirements": {
     "cpus": 2
   },
-  "onCreateCommand": "python3 -m pip install -r requirements.txt",
   "customizations": {
     "codespaces": {
       "openFiles": []
-    },
-    "vscode": {
-      "extensions": [
-        "ms-toolsai.jupyter"
-      ],
-      "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "jupyter.kernels.filter": [
-          {
-            "path": "/usr/local/bin/python"
-          }
-        ]
-      }
     }
   }
 }
