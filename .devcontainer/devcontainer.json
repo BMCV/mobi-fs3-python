@@ -13,7 +13,14 @@
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter"
-      ]
+      ],
+      "settings": {
+        "jupyter.kernels.filter": [
+          {
+            "path": "/usr/local/bin/python"
+          }
+        ]
+      }
     }
   }
 }
