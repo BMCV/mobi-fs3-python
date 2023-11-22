@@ -15,6 +15,7 @@
         "ms-toolsai.jupyter"
       ],
       "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
         "jupyter.kernels.filter": [
           {
             "path": "/usr/local/bin/python"
