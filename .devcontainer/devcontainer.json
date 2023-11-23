@@ -6,6 +6,14 @@
   "customizations": {
     "codespaces": {
       "openFiles": []
+    },
+    "vscode": {
+      "settings": {
+        "files.exclude": {
+          "/LICENSE": true,
+          "/images": true
+        }
+      }
     }
   }
 }
