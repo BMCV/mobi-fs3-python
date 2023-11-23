@@ -3,6 +3,7 @@
   "hostRequirements": {
     "cpus": 2
   },
+  "onCreateCommand": "code --disable-extension ms-python.vscode-pylance .",
   "customizations": {
     "codespaces": {
       "openFiles": []
@@ -10,6 +11,7 @@
     "vscode": {
       "settings": {
         "files.exclude": {
+          "**/.*": true,
           "LICENSE": true,
           "images": true
         }
