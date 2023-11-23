@@ -10,8 +10,8 @@
     "vscode": {
       "settings": {
         "files.exclude": {
-          "/LICENSE": true,
-          "/images": true
+          "LICENSE": true,
+          "images": true
         }
       }
     }
