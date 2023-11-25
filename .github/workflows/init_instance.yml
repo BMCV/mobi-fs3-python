@@ -6,9 +6,16 @@ on:
       - 'README.md.in'
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     if: github.repository_owner != 'BMCV'
+
+    permissions:
+      contents: write
+
     steps:
 
       - name: Initialize repository
@@ -28,3 +35,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Initialize instantiated template
+
+      - name: Add collaborators
+        run: gh api -X PUT repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/collaborators/kcsy
