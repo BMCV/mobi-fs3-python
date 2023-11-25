@@ -36,7 +36,7 @@ jobs:
         with:
           commit_message: Initialize instantiated template
 
-      - name: Add collaborators
-        run: gh api -X PUT repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/collaborators/kcsy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Add collaborators
+#        run: gh api -X PUT repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/collaborators/kcsy
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
