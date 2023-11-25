@@ -1,0 +1,31 @@
+name: Initialize instantiated template
+
+on:
+  push:
+    paths:
+      - '.github/workflows/init_instance.yml'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    if: github.repository_owner != 'BMCV'
+
+    permissions:
+      admin: write
+
+    steps:
+
+      - name: Initialize repository
+        uses: actions/checkout@v2
+
+      - name: Register repository
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ github.token }}
+          title: Instance: ${{ github.repository }}
+          body: |
+            **Register:** ${{ github.repository }}
+          repo: BMCV/${{ github.event.repository.name }}
