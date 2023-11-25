@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository_owner != 'BMCV'
     steps:
 
       - name: Initialize repository
@@ -20,7 +21,7 @@ jobs:
         uses: MathieuSoysal/replace-string-in-file@v1.0.0
         with:
           file: README.md
-          old-string: @username@
+          old-string: '@username@'
           new-string: ${{ github.repository_owner }}
 
       - name: Commit and push repository
