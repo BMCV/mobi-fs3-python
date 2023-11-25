@@ -1,0 +1,36 @@
+name: Initialize instantiated template
+
+on:
+  push:
+    paths:
+      - 'README.md.in'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Initialize repository
+        uses: actions/checkout@v2
+
+      - name: Update repository
+        run: git mv README.md.in README.md
+
+      - name: Update README.md
+        uses: MathieuSoysal/replace-string-in-file@v1.0.0
+        with:
+          file: README.md
+          old-string: @username@
+          new-string: ${{ github.repository_owner }}
+
+      - name: Commit and push repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Initialize instantiated template
+
+      - name: Disable this workflow
+        shell: bash
+        run: |
+          gh workflow disable -R $GITHUB_REPOSITORY "${{ github.workflow }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
