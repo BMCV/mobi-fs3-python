@@ -14,7 +14,7 @@ jobs:
     if: github.repository_owner != 'BMCV'
 
     permissions:
-      contents: write
+      administration: write
 
     steps:
 
