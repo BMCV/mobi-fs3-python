@@ -2,7 +2,7 @@
 name: Help wanted
 about: Things aren't working and I'm stuck!
 title: Things aren't working and I'm stuck!
-labels: help wanted, WS 23/24
+labels: help wanted
 assignees: ''
 
 ---

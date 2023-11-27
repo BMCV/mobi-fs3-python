@@ -2,7 +2,7 @@
 name: Review request
 about: Things seem to work but I want comments on my solution!
 title: Things seem to work but I want comments on my solution!
-labels: review request, WS 23/24
+labels: review request
 assignees: ''
 
 ---
