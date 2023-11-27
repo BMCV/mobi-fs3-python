@@ -1,4 +1,4 @@
 **Course supervisors:**
 
-- @kostrykin
 - @kcsy
+- @kostrykin
