@@ -10,20 +10,12 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Compute label
+      -
+        name: Compute label
         id: compute_label
         run: echo "label=$the_secret$(python .github/workflows/compute_label.py)" >> "$GITHUB_OUTPUT"
-      - name: Add label to issue
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ['${{ steps.compute_label.outputs.label }}']
-            })
-      - name: Set label color
+      -
+        name: Create label
         uses: actions/github-script@v6
         with:
           script: |
@@ -32,4 +24,15 @@ jobs:
               repo: context.repo.repo,
               '${{ steps.compute_label.outputs.label }}',
               'FFFFFF'
+            })
+      -
+        name: Add label to issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['${{ steps.compute_label.outputs.label }}']
             })
