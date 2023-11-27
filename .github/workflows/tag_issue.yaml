@@ -19,6 +19,7 @@ jobs:
         run: echo "label=$(python .github/compute_label.py)" >> "$GITHUB_OUTPUT"
       -
         name: Create label
+        continue-on-error: true
         uses: actions/github-script@v6
         with:
           script: |
@@ -28,7 +29,12 @@ jobs:
               name: '${{ steps.compute_label.outputs.label }}',
               color: 'FFFFFF'
             });
-            
+      -
+        name: Assign label
+        continue-on-error: true
+        uses: actions/github-script@v6
+        with:
+          script: |
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
               owner: context.repo.owner,
