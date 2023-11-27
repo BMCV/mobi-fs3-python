@@ -13,7 +13,7 @@ jobs:
       -
         name: Compute label
         id: compute_label
-        run: echo "label=$the_secret$(python .github/workflows/compute_label.py)" >> "$GITHUB_OUTPUT"
+        run: echo "label=$(python .github/compute_label.py)" >> "$GITHUB_OUTPUT"
       -
         name: Create label
         uses: actions/github-script@v6
