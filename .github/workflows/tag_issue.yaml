@@ -23,3 +23,13 @@ jobs:
               repo: context.repo.repo,
               labels: ['${{ steps.compute_label.outputs.label }}']
             })
+      - name: Set label color
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              '${{ steps.compute_label.outputs.label }}',
+              'FFFFFF'
+            })
