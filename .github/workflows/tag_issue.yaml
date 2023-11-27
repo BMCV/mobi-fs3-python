@@ -25,17 +25,13 @@ jobs:
             github.rest.issues.createLabel({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              '${{ steps.compute_label.outputs.label }}',
-              'FFFFFF'
-            })
-      -
-        name: Add label to issue
-        uses: actions/github-script@v6
-        with:
-          script: |
+              name: '${{ steps.compute_label.outputs.label }}',
+              color: 'FFFFFF'
+            });
+            
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ['${{ steps.compute_label.outputs.label }}']
-            })
+            });
