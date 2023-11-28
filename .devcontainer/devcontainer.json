@@ -11,6 +11,7 @@
       "settings": {
         "files.exclude": {
           "**/.*": true,
+          "**/*.md": true,
           "LICENSE": true,
           "images": true
         }
