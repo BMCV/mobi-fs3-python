@@ -1,4 +1,4 @@
-# [Methoden der Bioinformatik, Python-Praktikum]()
+# [Methoden der Bioinformatik 3. FS, Bildanalyse, Programmierübungen]()
 
 **Downloads:**
 📝&nbsp;[assignments.pdf](https://github.com/BMCV/mobi-fs3-python-assignments/releases/download/current/assignments.pdf),
