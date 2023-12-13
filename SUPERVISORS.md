@@ -1,5 +1,6 @@
 **Course supervisors:**
 
 - @kcsy
-- @kostrykin
 - @renpeng007
+- @moritzkunzmann
+- @kostrykin
