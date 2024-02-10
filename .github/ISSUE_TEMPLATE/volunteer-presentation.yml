@@ -36,7 +36,6 @@ body:
         - Lab Session 2
         - Lab Session 3
         - Lab Session 4
-      required: true
   - type: textarea
     id: info
     attributes:
