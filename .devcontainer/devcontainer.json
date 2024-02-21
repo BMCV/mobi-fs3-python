@@ -34,6 +34,7 @@
 				],
 
 				"files.exclude": {
+					"images": true,
 					"**/.*": true,
 					"**/*.md": true,
 					"**/LICENSE": true,
