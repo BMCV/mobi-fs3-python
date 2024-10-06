@@ -2,7 +2,7 @@
 
 **Downloads:**
 📝&nbsp;[assignments.pdf](https://bmcv.github.io/mobi-fs3-python/current/assignments.pdf),
-👨‍🏫&nbsp;[slides.pdf](https://bmcv.github.io/mobi-fs3-python-lecture/current/slides.pdf)
+👨‍🏫&nbsp;[slides.pdf](https://bmcv.github.io/mobi-fs3-python/current/slides.pdf)
 
 **Steps to start coding:**
 1. Click on "Code", then the "Codespaces" tab.
