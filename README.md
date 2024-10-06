@@ -1,7 +1,7 @@
 # [Methoden der Bioinformatik 3. FS,<br>Bildanalyse, Programmierübungen]()
 
 **Downloads:**
-📝&nbsp;[assignments.pdf](https://bmcv.github.io/mobi-fs3-python-assignments/current/assignments.pdf),
+📝&nbsp;[assignments.pdf](https://bmcv.github.io/mobi-fs3-python/current/assignments.pdf),
 👨‍🏫&nbsp;[slides.pdf](https://bmcv.github.io/mobi-fs3-python-lecture/current/slides.pdf)
 
 **Steps to start coding:**
